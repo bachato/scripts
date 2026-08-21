@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2018-2020, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2018-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -32,15 +32,15 @@
 ##
 ##
 ##
-##	HOW IF WORKS:
-##	- If no arguments passed
+##	HOW IT WORKS:
+##	- If no arguments are passed
 ##		Show . and ..
 ##		Shows directories
 ##		Shows visible files
 ##		Shows hidden directories
 ##		Shows hidden files
 ##	- else
-##		Runs with argument, but sorts directories first and prints color
+##		Runs with an argument, but sorts directories first and prints color
 ##
 ##
 ##
@@ -57,7 +57,7 @@
 ##
 ##	hidden_files=$(/usr/bin/ls -U -d .[^.]* 2> /dev/null | wc -l)
 ##		Same as above, but for '.[^.]*', which includes all
-##		hidden files but ommits '.' and '..' .
+##		hidden files but omits '.' and '..'.
 ##
 ##	.[^.]*
 ##		Anything starting with '.', followed by one char that can not be
@@ -77,8 +77,8 @@ function better_ls()
 	local LS="$(type -P ls)"
 
 
-	## IF NO ARGUMENTS PASSED -> run better ls version on current folder
-	## OR IF ARGUMENT IS A PATH -> run better ls version on specified folder
+	## IF NO ARGUMENTS ARE PASSED -> run better ls version on current folder
+	## OR IF ARGUMENT IS A PATH -> run better ls version on the specified folder
 	if [ $# -eq 0 ]; then
 
 		## IF THE CURRENT FOLDER IS NOT EMPTY -> Display all
@@ -127,7 +127,7 @@ function better_ls()
 
 
 
-	## IF ARGUMENTS PASSED -> run standard ls but with some tweaks (eg: colors)
+	## IF ARGUMENTS ARE PASSED -> run standard ls but with some tweaks (e.g. colors)
 	else
 		$LS --color=auto --human-readable --time-style=long-iso \
 		    --group-directories-first "$@";

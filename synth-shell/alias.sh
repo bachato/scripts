@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2023, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -43,15 +43,15 @@ alias free='\free -mht'
 ##==============================================================================
 
 ## take
-## create and cd into directory
+## Create and change to a directory
 #function take() { { [ -d $1 ] || mkdir -p $1; } && cd $1 ; }
 
 
 
 ## runbg
-## run command in background and print all the output only once when done
-## todo: do I want to run in in a separate thread and release the terminal?
-##       or do I just want to apply some niceness? Them, why not let it print
+## Run command in the background and print all output once when done
+## TODO: Do I want to run it in a separate thread and release the terminal?
+##       Or do I just want to apply some niceness? Then, why not let it print
 ##       directly to the terminal?
 #function runbg() {
 #    local cmd=$@

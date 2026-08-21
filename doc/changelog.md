@@ -3,10 +3,13 @@
 <!--------------------------------------+-------------------------------------->
 
 - Fix `better-ls` command to avoid error message on some terminal emulators. Thanks to @louddesignstudios and @omega100.
-- make uptime format shorter.
+- Make uptime format shorter.
 - Avoid printing error caused by lspci.
-- Moved new lines and layout of `status.sh` a bit.
+- Adjusted new lines and layout of `status.sh`.
 - Add support in the `setup.sh` script for `zsh`. Thanks to @andresjose42
+
+
+
 
 
 
@@ -45,9 +48,9 @@
 #                                     v2.2
 <!--------------------------------------+-------------------------------------->
 
-- Improvement and fixes to textfiles and code comments.
+- Improvements and fixes to text files and code comments.
 - Fixed "N/A" message printed for SWAP_MON if there is no swap (reported by jhakonen).
-- Add preview of the configuation options for status.sh.
+- Add preview of the configuration options for status.sh.
 - fancy_bash_prompt: Update titlebar of terminal-window when changing folder (reported by jhakonen).
 
 
@@ -83,7 +86,7 @@
 
 - Update README.
 - Fix bug that prevented correct reading of user config files.
-- SUpport for multiple GPUs.
+- Support for multiple GPUs.
 
 
 
@@ -126,7 +129,7 @@
 - Add script to shorten path ways without truncating folder names.
 - General code cleanup.
 - Faster response time (removed `load_config`).
-- In `status.sh`: logo and info are separate entities than can be printed separately.
+- In `status.sh`: logo and info are separate entities that can be printed separately.
 - In `status.sh`: info elements are now completely customizable (what to print, and in what order).
 - New `common` script to control the terminal cursor and print text-blocks side by side.
 - `status.sh` now only prints those elements that fit inside the screen, decided automatically based on character count. For example, if the terminal is too narrow, it does not print the logo, and if the terminal is extremely narrow, it does not print any information at all.
@@ -151,7 +154,4 @@
 - Smart installer lets you install for a single user or system wide.
 - Other minor fixes.
 - Overall code cleanup.
-
-
-
 

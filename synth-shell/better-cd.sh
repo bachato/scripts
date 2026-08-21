@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2020, Andres Gongora <mail@andresgongora.com>.          |
+##  | Copyright (c) 2020-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -61,7 +61,7 @@ better_cd()
 	local submenu_sel_key=""
 	print_submenu()
 	{
-		## Todo: comprobnar que options no está vacio
+		## TODO: Check that options are not empty
 
 
 		local dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -102,7 +102,7 @@ better_cd()
 		local loop=true
 		while $loop; do
 
-			## PRINT OPTIONS AND HIGHLIGH USER SELECTION
+			## PRINT OPTIONS AND HIGHLIGHT USER SELECTION
 			for i in ${!options_array[@]}; do
 				if [[ $index == $i ]]; then
 					printf "${text_format}${options_array[$i]}${no_color}\n"
@@ -146,7 +146,7 @@ better_cd()
 
 
 
-	## IF NO ARGUMENTS PASSED -> run better cd version on current folder
+	## IF NO ARGUMENTS ARE PASSED -> run better cd version on current folder
 	if [ $# -eq 0 ]; then
 		# USER SELECTION
 		local dir_base="$PWD/"
@@ -186,4 +186,3 @@ alias cd='better_cd'
 
 
 ### EOF ###
-
