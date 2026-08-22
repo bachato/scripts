@@ -103,7 +103,7 @@ better_cd()
 		while $loop; do
 
 			## PRINT OPTIONS AND HIGHLIGHT USER SELECTION
-			for i in ${!options_array[@]}; do
+			for i in "${!options_array[@]}"; do
 				if [[ $index == $i ]]; then
 					printf "${text_format}${options_array[$i]}${no_color}\n"
 				else
@@ -158,14 +158,14 @@ better_cd()
 
 			readarray -t dir_array <<< "$dirs" ## Split array
 
-			for i in ${!dir_array[@]}; do
+			for i in "${!dir_array[@]}"; do
 				dir_array[$i]="${dir_base}${dir_array[$i]}"
 			done
 
 			print_submenu "${dir_array[@]}"
 
 			if [ $submenu_sel_key == "enter" ]; then
-				"cd" ${dir_array[$submenu_sel_index]}
+				"cd" "${dir_array[$submenu_sel_index]}"
 				break
 
 			elif [ $submenu_sel_key == "right" ]; then
@@ -177,7 +177,7 @@ better_cd()
 		done
 
 	else
-		"cd" $@
+		"cd" "$@"
 	fi
 }
 

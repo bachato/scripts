@@ -217,6 +217,20 @@ If you like this project and want to contribute, you are most welcome to do so.
 
 
 
+### Testing
+
+Run isolated installation test before submitting changes:
+
+```
+bash tests/test-install.sh
+```
+
+Test installs every script under `tests/build/test-install.*`, with isolated `HOME`,
+checks generated files and configuration, then syntax-checks and sources every
+assembled script in clean Bash process. It does not modify installed configuration
+or shell startup files. Build path remains after test so assembled scripts can be
+inspected or sourced manually.
+
 ### Git branches
 
 There are two branches in this repository:
